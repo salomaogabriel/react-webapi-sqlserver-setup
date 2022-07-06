@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using simpleAPI.Data;
+using simpleAPI.Models;
 
 namespace simpleAPI.Controllers;
 
@@ -19,4 +21,13 @@ public class SimpleController : ControllerBase
     {
        return Ok(_context.TableName);
     }
+     [HttpPost]
+    public async Task<IActionResult> Add(RequestModel request )
+    {
+        var simpleModel = new Simple() {Name = request.Name};
+        _context.TableName.Add(simpleModel);
+                await _context.SaveChangesAsync();
+       return Ok(_context.TableName);
+    }
+    
 }
