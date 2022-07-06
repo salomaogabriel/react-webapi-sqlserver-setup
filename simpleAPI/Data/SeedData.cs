@@ -19,6 +19,25 @@ public static class SeedData
             new Models.Simple
             {
                 Name = "Name Two",
+            },
+            new Models.Simple
+            {
+                Name = "Nicholas",
+            }
+            ,
+            new Models.Simple
+            {
+                Name = "Gabriel",
+            }
+            ,
+            new Models.Simple
+            {
+                Name = "Eyahya",
+            }
+            ,
+            new Models.Simple
+            {
+                Name = "Qaisar",
             }
             // and more
             );
